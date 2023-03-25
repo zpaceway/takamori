@@ -104,7 +104,7 @@ function Home() {
               </div>
             </div>
             <div className="logo-container">
-              <span className="logo">ZPACEWAY</span>
+              <span className="logo">TAKAMORI</span>
               <span>®</span>
             </div>
           </div>
