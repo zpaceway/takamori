@@ -178,23 +178,6 @@ function Home() {
               </div>
               <div className="buttons">
                 <div
-                  className="button-a"
-                  onMouseDown={() => {
-                    gameboyInstance!.input.isPressingA = true;
-                  }}
-                  onMouseUp={() => {
-                    gameboyInstance!.input.isPressingA = false;
-                  }}
-                  onTouchStart={() => {
-                    gameboyInstance!.input.isPressingA = true;
-                  }}
-                  onTouchEnd={() => {
-                    gameboyInstance!.input.isPressingA = false;
-                  }}
-                >
-                  A
-                </div>
-                <div
                   className="button-b"
                   onMouseDown={() => {
                     gameboyInstance!.input.isPressingB = true;
@@ -210,6 +193,23 @@ function Home() {
                   }}
                 >
                   B
+                </div>
+                <div
+                  className="button-a"
+                  onMouseDown={() => {
+                    gameboyInstance!.input.isPressingA = true;
+                  }}
+                  onMouseUp={() => {
+                    gameboyInstance!.input.isPressingA = false;
+                  }}
+                  onTouchStart={() => {
+                    gameboyInstance!.input.isPressingA = true;
+                  }}
+                  onTouchEnd={() => {
+                    gameboyInstance!.input.isPressingA = false;
+                  }}
+                >
+                  A
                 </div>
               </div>
             </div>
