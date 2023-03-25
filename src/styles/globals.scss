@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tamarori {
+    width: 420px;
+    height: 100%;
+    max-height: 800px;
+    background-color: #bdbdb8;
+    border-radius: 20px 20px 100px 20px;
+    padding: 40px 40px 100px;
+    border: 2px solid #b1b1a4;
+    .inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .protector {
+          width: 100%;
+          border-radius: 20px 20px 80px 20px;
+          background-color: #525460;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 32px 40px;
+          border: 2px solid #444651;
+          .screen {
+            aspect-ratio: 10 / 9;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            background-color: #485914;
+            border: 2px solid rgb(4, 43, 7);
+            border-radius: 8px;
+            .canvas {
+              width: 100%;
+              height: 100%;
+              image-rendering: pixelated;
+            }
+          }
+        }
+        .logo-container {
+          font-weight: 900;
+          color: #111c7c;
+          .logo {
+            font-style: italic;
+            font-size: 40px;
+          }
+        }
+      }
+      &__bottom {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .top-buttons {
+          display: flex;
+          justify-content: space-between;
+          .pad {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            &__vertical {
+              position: absolute;
+              left: calc(50% - 16px);
+              height: 100px;
+              width: 32px;
+              border-radius: 8px;
+              background-color: black;
+              display: flex;
+              flex-direction: column;
+              .up,
+              .down {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            &__horizontal {
+              position: absolute;
+              top: calc(50% - 16px);
+              width: 100px;
+              height: 32px;
+              border-radius: 8px;
+              background-color: black;
+              display: flex;
+              .left,
+              .right {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .buttons {
+            display: flex;
+            gap: 4px;
+            color: white;
+
+            .button-a {
+              aspect-ratio: 1 / 1;
+              width: 52px;
+              height: 52px;
+              border-radius: 100vmax;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 32px;
+              background-color: brown;
+              margin-top: 32px;
+              transform: rotateZ(-15deg);
+              box-shadow: 0 0 8px gray;
+            }
+            .button-b {
+              aspect-ratio: 1 / 1;
+              width: 52px;
+              height: 52px;
+              border-radius: 100vmax;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 32px;
+              background-color: brown;
+              transform: rotateZ(-15deg);
+              box-shadow: 0 0 8px gray;
+            }
+          }
+        }
+        .bottom-buttons {
+          display: flex;
+          justify-content: center;
+          font-size: 12px;
+          .button {
+            background-color: #6f6c73;
+            border-radius: 100vmax;
+            padding: 4px 16px;
+            color: white;
+            transform: rotateZ(-15deg);
+          }
+        }
+      }
+    }
+  }
+}
